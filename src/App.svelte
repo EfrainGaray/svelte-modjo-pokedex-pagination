@@ -17,7 +17,6 @@
 		const {data:{attributes}} = await response.json();
 		newBatch = attributes.results;
 		count = attributes.count;
-		console.log(nextUrl);
 		nextUrl = attributes.next;
 	};
 	
@@ -71,6 +70,7 @@
     transition: 0.2s all;
     font-size: 14px;
 	cursor: pointer;
+	text-transform: capitalize;
   }
   li.active {
     background-color: #eeeeee;

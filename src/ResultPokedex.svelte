@@ -22,6 +22,9 @@ export let abilities = [
       flex-direction: column;
       gap:10;
     }
+    h2,p{
+        text-transform: capitalize;
+    } 
 </style>
 <div>
     <img src={photo} alt={name} width="200"/>
