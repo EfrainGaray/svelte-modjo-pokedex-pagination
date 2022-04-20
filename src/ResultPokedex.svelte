@@ -1,7 +1,8 @@
+<svelte:head>
+	<link rel="icon" href={photo} />
+</svelte:head>
 <script>
 import Abilities from "./Abilities.svelte";
-
-
 export let photo = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png";
 export let name = "bulbasaur";
 export let type = "grass/poison";

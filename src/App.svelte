@@ -1,3 +1,6 @@
+<svelte:head>
+	<title>Pokedex - Challenge - {name}</title>
+</svelte:head>
 <script>
 	import ResultPokedex from './ResultPokedex.svelte';
 	import {onMount} from "svelte";
