@@ -6,8 +6,8 @@
 
 
 
+## Get started
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
 git clone https://github.com/EfrainGaray/svelte-modjo-pokedex-pagination.git
@@ -16,8 +16,6 @@ cd svelte-modjo-pokedex-pagination
 
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
-
-## Get started
 
 Install the dependencies...
 
