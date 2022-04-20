@@ -2,7 +2,7 @@
 
 [![N|Solid](https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png)](https://pokeapi.co/)
 
-![Build Status](https://github.com/EfrainGaray/svelte-modjo-pokedex-pagination/actions/workflows/main.yaml/badge.svg)
+![Build Status](https://github.com/EfrainGaray/svelte-modjo-pokedex-pagination/actions/workflows/main.yml/badge.svg)
 
 
 
