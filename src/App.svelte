@@ -46,8 +46,15 @@
     flex-direction: column;
   }
   div{
-	  display: flex;
-	  width: 550px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	-ms-box-orient: horizontal;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+    justify-content: center;
+	gap: 20px;
   }
   ul {
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
