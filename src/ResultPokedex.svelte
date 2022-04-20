@@ -25,6 +25,11 @@ export let abilities = [
     h2,p{
         text-transform: capitalize;
     } 
+   .abilities{
+        display: block;
+        text-align: center;
+        margin-bottom: 5px;
+    }
 </style>
 <div>
     <img src={photo} alt={name} width="200"/>
@@ -38,6 +43,7 @@ export let abilities = [
      
     </p>
     <p>
+        <b class="abilities">Abilities</b>
         {#each abilities as ability}
             <Abilities name={ability}/>
         {/each}

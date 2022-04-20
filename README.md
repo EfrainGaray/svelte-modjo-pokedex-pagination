@@ -1,18 +1,17 @@
-*Psst — looking for a more complete solution? Check out [SvelteKit](https://kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.*
+# Infinite pokemon scroll - modyo challenge pokedex [DEMO](https://challenge-pokedex.surge.sh/):
 
-*Looking for a shareable component template instead? You can [use SvelteKit for that as well](https://kit.svelte.dev/docs#packaging) or the older [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+[![N|Solid](https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png)](https://pokeapi.co/)
 
----
+![Build Status](https://github.com/EfrainGaray/svelte-modjo-pokedex-pagination/actions/workflows/main.yaml/badge.svg)
 
-# svelte app
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
+git clone https://github.com/EfrainGaray/svelte-modjo-pokedex-pagination.git
+cd svelte-modjo-pokedex-pagination
 ```
 
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
@@ -23,7 +22,6 @@ cd svelte-app
 Install the dependencies...
 
 ```bash
-cd svelte-app
 npm install
 ```
 
@@ -60,38 +58,8 @@ If you're building a single-page app (SPA) with multiple routes, sirv needs to b
 "start": "sirv public --single"
 ```
 
-## Using TypeScript
-
-This template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:
-
-```bash
-node scripts/setupTypeScript.js
-```
-
-Or remove the script via:
-
-```bash
-rm scripts/setupTypeScript.js
-```
-
-If you want to use `baseUrl` or `path` aliases within your `tsconfig`, you need to set up `@rollup/plugin-alias` to tell Rollup to resolve the aliases. For more info, see [this StackOverflow question](https://stackoverflow.com/questions/63427935/setup-tsconfig-path-in-svelte).
-
 ## Deploying to the web
 
-### With [Vercel](https://vercel.com)
-
-Install `vercel` if you haven't already:
-
-```bash
-npm install -g vercel
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-vercel deploy --name my-project
-```
 
 ### With [surge](https://surge.sh/)
 
@@ -107,3 +75,37 @@ Then, from within your project folder:
 npm run build
 surge public my-project.surge.sh
 ```
+
+
+## Deploy workflow
+
+Deploy in aws with githubactions.
+
+services used surge.sh
+
+workflow
+```yaml
+name: Deploy Website
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Deploying to surge
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install surge and fire deployment
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.19.0
+      - run: npm install -g surge
+      - run: npm install -g yarn
+      - run: yarn install
+      - run: yarn run build
+      - run: surge public ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+```
+
+## License
+
+MIT
