@@ -14,6 +14,6 @@ jobs:
           node-version: 14.19.0
       - run: npm install -g surge
       - run: npm install -g yarn
-      - run: yarn run build
+      - run: yarn install
       - run: yarn run build
       - run: surge public ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
