@@ -90,7 +90,7 @@
 <main>
 
 <img {src} alt="logo" />
-  <h4>Infinite pokemon scroll - test challenge pokedex</h4>
+  <h4>Infinite pokemon scroll - aiep challenge pokedex</h4>
  <div>
 	<ul>
 		{#each data as item}
